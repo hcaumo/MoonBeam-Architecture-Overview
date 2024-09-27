@@ -5,8 +5,8 @@ Drexfy is a blockchain-based platform that simplifies the process of investing i
 Registration Process
 
 The registration process ensures that all users undergo thorough KYC and AML checks to maintain compliance and security.
-Registration Workf![register_process](https://github.com/user-attachments/assets/bbcb85f4-6fff-4acc-98c3-44e941701185)
-low:
+Registration Workflow:
+![register_process](https://github.com/user-attachments/assets/72eab113-3e25-4ed4-b2f1-9c042c3ea4ac)
 
     User Registration:
         Users begin the registration process via the Bubble.io frontend.
@@ -18,6 +18,20 @@ low:
         Upon successful KYC/AML verification, the Wallet Generator Lambda function is triggered via API Gateway.
         A new wallet is generated, and the private key is encrypted using the Encrypt PrivateKey Lambda function and AWS KMS.
         The encrypted private key is securely stored in AWS DynamoDB.
+
+    NFT Classification:
+
+    After the Wallet Generator Lambda creates a new wallet, the NFT Classification Lambda is activated.
+    NFT Issuance:
+    The Lambda function issues an NFT to the user's wallet based on their classification, which could be one of the following categories:
+        US Accredited Investor
+        US Non-Accredited Investor
+        European Accredited Investor
+        European Non-Accredited Investor
+        Sanctioned
+
+    Smart Contract Interaction:
+    The classification details and NFT issuance are recorded in the InvestorClassification smart contract within the Moonbeam Network for regulatory compliance and validation.
 
 This process ensures all users are thoroughly vetted before participating in the platform, maintaining compliance and security.
 Buy Investment Process
@@ -76,7 +90,7 @@ Compliance Process
 
 Drexfy ensures compliance with AML regulations, taking immediate action if a user fails AML checks.
 WebHook Notification Workflow:
-![webhook_notification_process](https://github.com/user-attachments/assets/4f1d1022-319e-4315-95ca-fe0c88a9403f)
+![webhook_notification_process](https://github.com/user-attachments/assets/89cfa1e3-3d54-4e9b-9d1d-a9a02622bae2)
 
     AML Rejection Notification:
         The third-party service monitors users for AML compliance.
@@ -85,6 +99,7 @@ WebHook Notification Workflow:
     User Blocking:
         The AML Checker Lambda function notifies the Bubble.io frontend.
         The user's account is flagged and blocked from making purchases or withdrawals until the issue is resolved.
+        Change Investor Classification NFT metadata and On-Chain classification.
 
 Contact & Support
 
