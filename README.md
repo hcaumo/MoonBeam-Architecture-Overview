@@ -62,7 +62,7 @@ Repayment Process
 
 The repayment process handles monthly repayment transactions, updating financial instruments and managing smart contracts on the blockchain.
 Repayment Workflow:
-![stablecoin_repayment](https://github.com/user-attachments/assets/e9c165e3-9b77-4a47-bd7c-12539a7863d1)
+![stablecoin_repayment_PS](https://github.com/user-attachments/assets/707c684c-4ae9-4761-b99e-3b1780c9b158)
 
     Admin Triggers Repayment:
         Admin initiates the repayment process through the API Gateway, retrieving wallet information from the Bubble.io database.
