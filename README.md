@@ -1,7 +1,8 @@
 Drexfy Platform Overview
 Architecture Overview
 
-Drexfy is a blockchain-based platform that simplifies the process of investing in securitized SME credits while ensuring compliance and security through robust KYC/AML procedures. The platform leverages various AWS services and blockchain technology to provide a seamless and secure user experience.
+Drexfy is a blockchain-based platform that simplifies the process of investing in securitized SME credits while ensuring compliance and security through KYC/AML procedures. The platform leverages various AWS services and blockchain technology to provide a seamless and secure user experience.
+
 Registration Process
 
 The registration process ensures that all users undergo thorough KYC and AML checks to maintain compliance and security.
@@ -34,9 +35,10 @@ Registration Workflow:
     The classification details and NFT issuance are recorded in the InvestorClassification smart contract within the Moonbeam Network for regulatory compliance and validation.
 
 This process ensures all users are thoroughly vetted before participating in the platform, maintaining compliance and security.
+
 Buy Investment Process
 
-Drexfy offers a streamlined experience for investors to purchase securitized SME credits, leveraging blockchain technology and AWS services for secure and efficient transactions.
+Drexfy handle all blockchain interactions.
 Buy Investment Workflow:
 ![buy_investment_process](https://github.com/user-attachments/assets/841f80fd-f301-4085-8607-971b382e36ac)
 
